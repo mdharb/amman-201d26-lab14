@@ -21,13 +21,22 @@ function renderCart() {
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
 
+let table = document.getElementById('cart')
+  let tBody=document.getElementsByTagName('tbody')
+  // table.appendChild(tBody)
+  // let tBody=document.createElement('tbody')
+  // table.appendChild(tBody)
+  // let trElement=document.createElement('tr')
+  // tBody.appendChild(trElement)
+  //trElement.textContent="";
+   tBody.textContent="";
 
 }
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
-  let tableBody = document.get('tbody');
+  let tableBody = document.getElementsByTagName('tbody');
   table.appendChild(tableBody);
 
   let tr= document.createElement('tr');
