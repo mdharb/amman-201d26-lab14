@@ -21,31 +21,35 @@ function renderCart() {
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
 
-let table = document.getElementById('cart')
-  let tBody=document.getElementsByTagName('tbody')
-  // table.appendChild(tBody)
-  // let tBody=document.createElement('tbody')
-  // table.appendChild(tBody)
-  // let trElement=document.createElement('tr')
-  // tBody.appendChild(trElement)
-  //trElement.textContent="";
-   tBody.textContent="";
+let tBdy= document.createElement('tbody');
+table.appendChild(tBdy);
+
+let trEelement= document.createElement('tr');
+tBdy.appendChild(trEelement);
+
+trEelement.textContent= '';
+
+// let tBody=document.getElementById('tbody')
+// tBody.textContent='';
 
 }
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
-  let tableBody = document.getElementsByTagName('tbody');
-  table.appendChild(tableBody);
+let tBdy= document.createElement('tbody');
+table.appendChild(tBdy);
 
-  let tr= document.createElement('tr');
-  tableBody.appendChild(tr);
+let trEelement= document.createElement('tr');
+tBdy.appendChild(trEelement);
 
-  let td= document.createElement('td');
-  tr.appendChild(td);
-  
-  
+for(let i=0; i< cart.length; i++){
+
+  let tdEelement = document.createElement('td');
+  trEelement.appendChild(tdEelement);
+
+  tdEelement.textContent= this.cart[i];
+}
 
   // TODO: Find the table body
 
