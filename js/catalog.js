@@ -62,7 +62,7 @@ function updateCounter() {
 
   let counter=0;
 
-  for(let i=0; i<cart.length; i++){
+  for(let i=0; i< cart.length; i++){
 
     counter++
   }
